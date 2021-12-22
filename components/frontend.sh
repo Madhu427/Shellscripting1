@@ -25,7 +25,6 @@ yum install nginx -y
 if [ $? -ne 0 ]; then
   echo "Nginx Installation is Failed"
   exit
-
 else "Nginx Installed"
 
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
@@ -33,7 +32,7 @@ curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/fron
 if [ $? -ne 0 ]; then
   echo "Download front-end failed"
   exit
-else "front-end zip file unzipped "
+else "front-end zip file unzipped"
 
 
 cd /usr/share/nginx/html
