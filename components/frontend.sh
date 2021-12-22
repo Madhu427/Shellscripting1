@@ -25,7 +25,7 @@ STAT_CHECK() {
     echo -e "\e[1;31m${2} - Failed"
     exit
     else
-      echo -e "\e[1;31m${2} - Success"
+      echo -e "\e[1;32m${2} - Success"
   fi
 }
 
