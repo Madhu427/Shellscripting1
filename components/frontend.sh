@@ -34,7 +34,7 @@ yum install nginx -y
 STAT_CHECK $? "Nginx installation"
 
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
-STAT_CHECK $? "Download Front-end Failed"
+STAT_CHECK $? "Download Front-end"
 
 cd /usr/share/nginx/html
 rm -rf *
