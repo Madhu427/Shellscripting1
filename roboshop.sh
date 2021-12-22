@@ -1,6 +1,7 @@
 USER_UID=$(id -u)
 
 if [ ${USER_UID} -ne 0 ]; then
+
   echo -e "\e[1;31m You should be root user to perform the script \e[0m"
   exit
 fi

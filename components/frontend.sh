@@ -20,20 +20,19 @@
 # systemctl restart nginx
 
 
+STAT_CHECK() {
+  if [ $1 -ne 0 ]; then
+    echo "S2"
+    exit
+  fi
+}
+
 yum install nginx -y
 
-if [ $? -ne 0 ]; then
-  echo "Nginx Installation is Failed"
-  exit
-else "Nginx Installed"
+STAT_CHECK $? "Nginx installation Failed"
 
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
-
-if [ $? -ne 0 ]; then
-  echo "Download front-end failed"
-  exit
-else "front-end zip file unzipped"
-
+STAT_CHECK $? "Download Front-end Failed"
 
 cd /usr/share/nginx/html
 rm -rf *
