@@ -1,0 +1,18 @@
+USER_UID=$(id -u)
+
+if [ ${USER_ID} -ne 0 ]; then
+  echo -e "\e[1;31m You should be root user to perform the script \e[0m"
+  exit
+fi
+
+COMPONENT=$1
+
+if [ -z "$COMPONENT"]; then
+  echo -e "\e[1;31m Component is missing\e[0m"
+  exit
+fi
+
+if [ ! -e components/${COMPONENT}.sh ]; then
+  echo "\e[1;31m Given Component doesn't exist in the Script\e[0m"
+  exit
+fi
