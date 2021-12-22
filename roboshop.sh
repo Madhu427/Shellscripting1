@@ -13,7 +13,7 @@ if [ -z "$COMPONENT"]; then
 fi
 
 if [ ! -e components/${COMPONENT}.sh ]; then
-  echo "\e[1;31mGiven Component doesn't exist in the Script\e[0m"
+  echo -e "\e[1;31mGiven Component doesn't exist in the Script\e[0m"
   exit
 fi
 
