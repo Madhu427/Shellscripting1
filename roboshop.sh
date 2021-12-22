@@ -7,7 +7,7 @@ fi
 
 COMPONENT=$1
 
-if [ -z "$COMPONENT"]; then
+if [ -z "$COMPONENT" ]; then
   echo -e "\e[1;31m Component is missing\e[0m"
   exit
 fi
