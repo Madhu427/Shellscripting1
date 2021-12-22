@@ -31,12 +31,12 @@ STAT_CHECK() {
   fi
 }
 
-yum install nginx -y
+yum install nginx -y &>>${LOG_FILE}
 
-STAT_CHECK $? "Nginx installation" &>>${LOG_FILE}
+STAT_CHECK $? "Nginx installation"
 
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
-STAT_CHECK $? "Download Front-end" &>>${LOG_FILE}
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>${LOG_FILE}
+STAT_CHECK $? "Download Front-end"
 
 cd /usr/share/nginx/html
 rm -rf *
