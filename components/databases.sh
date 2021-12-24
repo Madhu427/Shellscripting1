@@ -33,6 +33,7 @@ yum install -y mongodb-org &>>${LOG_FILE}
 STAT_CHECK $? "Installed Mongodb"
 
 sed -i "s/127.0.0.1/0.0.0.0/" /etc/mongod.conf
+STAT_CHECK $? "Update mongodb conf"
 
 systemctl enable mongod &>>${LOG_FILE} && systemctl start mongod &>>${LOG_FILE}
 STAT_CHECK $? "Start Mongodb Service"
