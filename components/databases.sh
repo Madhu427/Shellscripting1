@@ -21,7 +21,7 @@
 ## mongo < catalogue.js
 ## mongo < users.js
 
-#echo -e "\e[1:33m-----------------MONGODB SETUP-----------------\e[0m"
+echo  "\e[1:33m-----------------MONGODB SETUP-----------------\e[0m"
 source components/common.sh
 
 
