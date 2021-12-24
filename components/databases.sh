@@ -64,13 +64,11 @@ STAT_CHECK $? "Loaded Mongodb Schema"
 
 echo -e "\e[1;33m-----------------REDIS SETUP-----------------\e[0m"
 
-yum install epel-release yum-utils -y &>>${LOG_FILE}
-STAT_CHECK $? "Install epel Redis"
+curl -L https://raw.githubusercontent.com/roboshop-devops-project/redis/main/redis.repo -o /etc/yum.repos.d/redis.repo &>>${LOG_FILE}
+STAT_CHECK $? "Download Redis repo"
 
-yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y &>>${LOG_FILE}
-STAT_CHECK $? " Install Redis repo"
-
-yum-config-manager --enable remi && yum install redis -y &>>${LOG_FILE}
+yum install redis -y
+STAT_CHECK $? "Install Redid"
 
 sed -i "s/127.0.0.1/0.0.0.0" /etc/redis.conf &>>${LOG_FILE}
 
