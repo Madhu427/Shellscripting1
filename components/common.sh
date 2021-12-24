@@ -7,3 +7,9 @@ else
   echo -e "\e[1m${2} - \e[1;32mSuccess\e[0m"
 fi
 }
+
+DOWNLOAD() {
+  curl -s -L -o /tmp/mongodb${1}.zip "https://github.com/roboshop-devops-project/${1}/archive/main.zip" &>>${LOG_FILE}
+  STAT_CHECK $? "download ${1} code"
+
+}

@@ -6,7 +6,7 @@ if [ ${USER_UID} -ne 0 ]; then
   exit
 fi
 
-COMPONENT=$1
+export COMPONENT=$1
 
 if [ -z "$COMPONENT" ]; then
   echo -e "\e[1;31m Component is missing\e[0m"

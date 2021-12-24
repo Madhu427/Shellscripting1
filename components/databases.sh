@@ -39,8 +39,8 @@ sed -i "s/127.0.0.1/0.0.0.0/" /etc/mongod.conf
 systemctl enable mongod &>>${LOG_FILE} && systemctl start mongod &>>${LOG_FILE}
 STAT_CHECK $? "Start Mongodb Service"
 
-curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>${LOG_FILE}
-STAT_CHECK $? "Extracted mongodb file"
+#curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>${LOG_FILE}
+#STAT_CHECK $? "Extracted mongodb file"
 
 cd /tmp &>>${LOG_FILE} && unzip -o mongodb.zip &>>${LOG_FILE}
 STAT_CHECK $? "Download Mongodb"
