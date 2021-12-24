@@ -21,6 +21,8 @@
 ## mongo < catalogue.js
 ## mongo < users.js
 
+
+source=components/common.sh
 LOG_FILE=/tmp/roboshop.log
 rm -f ${LOG_FILE}
 
