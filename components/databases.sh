@@ -107,3 +107,4 @@ systemctl enable rabbitmq-server &>>{LOG_FILE} && systemctl start rabbitmq-serve
 STAT_CHECK $? "Start RabbitMQ "
 
 rabbitmqctl add_user roboshop roboshop123 &>>${LOG_FILE}
+STAT_CHECK $? "Create user in Rabbit MQ"
