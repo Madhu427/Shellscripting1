@@ -18,7 +18,7 @@
 #Finally restart the service once to effect the changes.
 
 # systemctl restart nginx
-source=components/common.sh
+source components/common.sh
 
 LOG_FILE=/tmp/roboshop.log
 rm -f ${LOG_FILE}
