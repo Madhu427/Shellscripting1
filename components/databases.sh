@@ -21,7 +21,7 @@
 ## mongo < catalogue.js
 ## mongo < users.js
 
-
+echo "-----------------MONGODB SETUP-----------------"
 source components/common.sh
 
 
