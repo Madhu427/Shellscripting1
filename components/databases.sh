@@ -44,7 +44,7 @@ STAT_CHECK $? "Start Mongodb Service"
 
 DOWNLOAD mongodb
 
-cd /tmp &>>${LOG_FILE} && unzip mongodb.zip &>>${LOG_FILE}
+cd /tmp &>>${LOG_FILE} && unzip -o mongodb.zip &>>${LOG_FILE}
 STAT_CHECK $? "Download Mongodb"
 
 cd mongodb-main
