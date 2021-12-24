@@ -42,6 +42,8 @@ STAT_CHECK $? "Start Mongodb Service"
 #curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>${LOG_FILE}
 #STAT_CHECK $? "Extracted mongodb file"
 
+DOWNLOAD mongodb
+
 cd /tmp &>>${LOG_FILE} && unzip -o mongodb.zip &>>${LOG_FILE}
 STAT_CHECK $? "Download Mongodb"
 
