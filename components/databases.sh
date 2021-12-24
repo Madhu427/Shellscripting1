@@ -43,8 +43,6 @@ STAT_CHECK $? "Start Mongodb Service"
 
 DOWNLOAD mongodb
 
-
-
 cd mongodb-main
 mongo < catalogue.js &>>${LOG_FILE} && mongo < users.js &>>${LOG_FILE}
 STAT_CHECK $? "Loaded Mongodb Schema"
@@ -76,4 +74,4 @@ STAT_CHECK $? "Update Redis config"
 
 systemctl enable redis &>>${LOG_FILE} && systemctl start redis &>>${LOG_FILE}
 
-
+STAT_CHECK $? "Update Redis"
