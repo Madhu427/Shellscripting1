@@ -23,8 +23,6 @@
 
 
 source components/common.sh
-LOG_FILE=/tmp/roboshop.log
-rm -f ${LOG_FILE}
 
 
 curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/roboshop-devops-project/mongodb/main/mongo.repo &>>${LOG_FILE}
@@ -44,8 +42,7 @@ STAT_CHECK $? "Start Mongodb Service"
 
 DOWNLOAD mongodb
 
-cd /tmp &>>${LOG_FILE} && unzip -o mongodb.zip &>>${LOG_FILE}
-STAT_CHECK $? "Download Mongodb"
+
 
 cd mongodb-main
 mongo < catalogue.js &>>${LOG_FILE} && mongo < users.js &>>${LOG_FILE}
