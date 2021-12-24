@@ -42,7 +42,7 @@ rm -rf /usr/share/nginx/html/*
 STAT_CHECK $?  "Remove Old HTML Files"
 
 cd /tmp && unzip /tmp/frontend.zip &>>${LOG_FILE}
-STAT_CHECK$? "Extracting Front-end content"
+STAT_CHECK $? "Extracting Front-end content"
 
 cd /tmp/frontend-main/static/ && cp -r * /usr/share/nginx/html/
 STAT_CHECK $? "Copying frontend content"
