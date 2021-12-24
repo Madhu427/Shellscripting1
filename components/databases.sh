@@ -54,4 +54,4 @@ STAT_CHECK $? "Download Mongodb"
 
 cd mongodb-main
 mongo < catalogue.js &>>${LOG_FILE} && mongo < users.js &>>${LOG_FILE}
-STAT_CHECK $? "Load Schema"
+STAT_CHECK $? "Loaded Mongodb Schema"
