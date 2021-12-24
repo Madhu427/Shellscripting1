@@ -70,7 +70,7 @@ STAT_CHECK $? "Install epel Redis"
 yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y &>>${LOG_FILE}
 STAT_CHECK $? " Install Redis repo"
 
-yum-config-manager --enable remi && redis -y &>>${LOG_FILE}
+yum-config-manager --enable remi && yum install redis -y &>>${LOG_FILE}
 
 sed -i "s/127.0.0.1/0.0.0.0" /etc/redis.conf &>>${LOG_FILE}
 
