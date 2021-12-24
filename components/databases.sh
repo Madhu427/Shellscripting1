@@ -48,4 +48,8 @@ systemctl enable mongod &>>${LOG_FILE} && systemctl start mongod &>>${LOG_FILE}
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>${LOG_FILE}
 STAT_CHECK $? "Extracted mongodb file"
 
-cd /tmp &>>${LOG_FILE} && unzip mongodb.zip &>>${LOG_FILE}
+cd /tmp &>>${LOG_FILE} && unzip -o mongodb.zip &>>${LOG_FILE}
+STAT_CHECK $? "ZIP file extracted"
+
+cd mongodb-main
+mongo < catalogue.js &>>${LOG_FILE} && mongo < users.js &>>${LOG_FILE}
