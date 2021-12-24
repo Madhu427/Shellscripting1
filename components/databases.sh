@@ -47,3 +47,33 @@ DOWNLOAD mongodb
 cd mongodb-main
 mongo < catalogue.js &>>${LOG_FILE} && mongo < users.js &>>${LOG_FILE}
 STAT_CHECK $? "Loaded Mongodb Schema"
+
+
+
+
+# yum install epel-release yum-utils -y
+# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
+# yum-config-manager --enable remi
+# yum install redis -y
+#Update the BindIP from 127.0.0.1 to 0.0.0.0 in config file /etc/redis.conf & /etc/redis/redis.conf
+#
+#Start Redis Database
+
+# systemctl enable redis
+# systemctl start redis
+
+echo -e "\e[1;33m-----------------REDIS SETUP-----------------\e[0m"
+
+yum install epel-release yum-utils -y &>>${LOG_FILE}
+STAT_CHECK $? "Install epel Redis"
+
+yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y &>>${LOG_FILE}
+STAT_CHECK $? " Install Redis repo"
+
+yum-config-manager --enable remi && redis -y &>>${LOG_FILE}
+
+sed -i "s/127.0.0.1/0.0.0.0" /etc/redis.conf &>>${LOG_FILE}
+
+systemctl enable redis &>>${LOG_FILE} && systemctl start redis &>>${LOG_FILE}
+
+
