@@ -112,3 +112,4 @@ fi
 
 rabbitmqctl set_user_tags roboshop administrator &>>${LOG_FILE}
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>${LOG_FILE}
+STAT_CHECK $? "Configure APP RabbitMQ User"
