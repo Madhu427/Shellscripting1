@@ -43,7 +43,7 @@ rm -rf /usr/share/nginx/html/* &>>${LOG_FILE}
 cd /tmp && unzip /tmp/frontend.zip &>>${LOG_FILE}
 STAT_CHECK$? "Extracting Front-end content"
 
-cd /tmp/frontend-main/static/ && cp -r /usr/share/nginx/html/
+cd /tmp/frontend-main/static/ && cp -r * /usr/share/nginx/html/
 STAT_CHECK $? "Copying frontend content"
 
 cp/tmp/frontend-main/localhost.conf /etc/nginx/default.d/roboshop.conf
