@@ -53,5 +53,5 @@ cd /tmp &>>${LOG_FILE} && unzip -o mongodb.zip &>>${LOG_FILE}
 STAT_CHECK $? "Download Mongodb"
 
 cd mongodb-main
-mongo < catalogue.js &>>${LOG_FILE} && mongo < users.js &>>${LOG_FILE
+mongo < catalogue.js &>>${LOG_FILE} && mongo < users.js &>>${LOG_FILE}
 STAT_CHECK $? "Load Schema"
