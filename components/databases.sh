@@ -97,11 +97,9 @@ echo -e "\e[1;33m-----------------RABBITMQ SETUP-----------------\e[0m"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash &>>${LOG_FILE}
 STAT_CHECK $? "Setup RabbitMQ repo"
 
-yum install https://github.com/rabbitmq/erlang-rpm/releases/download/v23.2.6/erlang-23.2.6-1.el7.x86_64.rpm -y &>>${LOG_FILE}
-STAT_CHECK $? "Download Erlang"
+yum install https://github.com/rabbitmq/erlang-rpm/releases/download/v23.2.6/erlang-23.2.6-1.el7.x86_64.rpm rabbitmq-server -y &>>${LOG_FILE}
+STAT_CHECK $? "Install Erlang & RabbitMQ"
 
-yum install rabbitmq-server -y &>>${LOG_FILE}
-STAT_CHECK $? "Install RabbitMQ"
 
 systemctl enable rabbitmq-server &>>{LOG_FILE} && systemctl start rabbitmq-server &>>${LOG_FILE}
 STAT_CHECK $? "Start RabbitMQ "
