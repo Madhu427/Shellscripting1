@@ -46,4 +46,4 @@ STAT_CHECK $? "moved catalogue to home"
 mv catalogue-main catalogue && sudo cd /home/roboshop/catalogue &>>${LOG_FILE}
 
 npm install &>>${LOG_FILE}
-STAT_CHECK $? {Catalouge Installed}
+STAT_CHECK $? "Catalouge Installed"
