@@ -39,7 +39,7 @@ fi
 
 DOWNLOAD catalogue
 
-cd /home/roboshop &>>${LOG_FILE} && unzip /tmp/catalogue.zip &>>${LOG_FILE}
+cd /home/roboshop &>>${LOG_FILE}
 STAT_CHECK $? "Catalouge file unzipped"
 
 mv catalogue-main catalogue &>>${LOG_FILE} && cd /home/roboshop/catalogue &>>${LOG_FILE}
