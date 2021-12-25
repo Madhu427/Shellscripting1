@@ -31,7 +31,7 @@ source components/common.sh
 yum install nodejs make gcc-c++ -y &>>${LOG_FILE}
 STAT_CHECK $? "INSTALL Node JS"
 
-id roboshop
+id roboshop &>>${LOG_FILE}
 if [ $? -ne 0 ]; then
 useradd roboshop &>>${LOG_FILE}
 STAT_CHECK $? "User added"
