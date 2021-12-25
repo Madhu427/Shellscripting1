@@ -38,7 +38,7 @@ STAT_CHECK $? "User added"
 fi
 
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>${LOG_FILE}
-STAT_CHECK $? (Download catalouge)
+STAT_CHECK $? "Download catalouge"
 
 cd /home/roboshop && -o unzip /tmp/catalogue.zip &>>${LOG_FILE}
 STAT_CHECK $? "moved catalogue to home"
