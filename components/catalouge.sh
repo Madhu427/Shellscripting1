@@ -43,7 +43,7 @@ STAT_CHECK $? "Download catalouge"
 cd /home/roboshop && unzip -o /tmp/catalogue.zip &>>${LOG_FILE}
 STAT_CHECK $? "moved catalogue to home"
 
-mv catalogue-main catalogue && cd /home/roboshop/catalogue &>>${LOG_FILE}
+mv catalogue-main catalogue && sudo cd /home/roboshop/catalogue &>>${LOG_FILE}
 
 npm install &>>${LOG_FILE}
 STAT_CHECK $? {Catalouge Installed}
