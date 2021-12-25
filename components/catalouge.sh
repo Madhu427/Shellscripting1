@@ -37,9 +37,11 @@ useradd roboshop &>>${LOG_FILE}
 STAT_CHECK $? "User added"
 fi
 
-DOWNLOAD catalouge
-
 rm -rf cd/home/roboshop/catalouge && mkdir -p /home/roboshop/catalouge && cp -r /tmp/catalouge-main/* /home/roboshop/catalouge &>>${LOG_FILE}
 STAT_CHECK $? "Copy catalouge content"
+
+DOWNLOAD catalouge
+
+
 
  cd /home/roboshop/catalogue && npm install &>>${LOG_FILE}
