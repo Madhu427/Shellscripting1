@@ -30,7 +30,7 @@ fi
 DOWNLOAD() {
   curl -s -L -o /tmp/${1}.zip "https://github.com/roboshop-devops-project/${1}/archive/main.zip" &>>${LOG_FILE}
   STAT_CHECK $? "download ${1} code"
-  cd /tmp &>>${LOG_FILE} && unzip -o /tmp/{1}.zip &>>${LOG_FILE}
+  cd /tmp &>>${LOG_FILE} && unzip -o /tmp/${1}.zip &>>${LOG_FILE}
   STAT_CHECK $? "extract ${1} code"
 
 }
