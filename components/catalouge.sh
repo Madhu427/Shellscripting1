@@ -49,6 +49,7 @@ STAT_CHECK $? " Install node js dependencies"
 chown roboshop:roboshop -R /home/roboshop
 
 sed -i "s/MONGO_DNSNAME/mongo.devopsrobshop.com/" /home/roboshop/catalogue/systemd.service &>>${LOG_FILE}
+&& mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service &>>${LOG_FILE}
 STAT_CHECK $? "update entries in systemd file"
 
 
