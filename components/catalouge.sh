@@ -37,13 +37,22 @@ useradd roboshop &>>${LOG_FILE}
 STAT_CHECK $? "User added"
 fi
 
-curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>${LOG_FILE}
-STAT_CHECK $? "Download catalouge"
+DOWNLOAD catalogue
 
-cd /home/roboshop && unzip -o /tmp/catalogue.zip &>>${LOG_FILE}
-STAT_CHECK $? "moved catalogue to home"
+rm -rf /home/roboshop/catalogue && mkdir /home/roboshop/catalogue && cp -r /tmp/catalouge-main/* /home/roboshop/catalogue
+&>>{LOG_FILE}
+STAT_CHECK $? "Copy catalogue content"
 
-mv catalogue-main catalogue &>>${LOG_FILE} && sudo cd /home/roboshop/catalogue &>>${LOG_FILE}
+cd /home/roboshop && npm install
 
-npm install &>>${LOG_FILE}
-STAT_CHECK $? "Catalouge Installed"
+
+#curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>${LOG_FILE}
+#STAT_CHECK $? "Download catalouge"
+#
+#cd /home/roboshop && unzip -o /tmp/catalogue.zip &>>${LOG_FILE}
+#STAT_CHECK $? "moved catalogue to home"
+#
+#mv catalogue-main catalogue &>>${LOG_FILE} && sudo cd /home/roboshop/catalogue &>>${LOG_FILE}
+#
+#npm install &>>${LOG_FILE}
+#STAT_CHECK $? "Catalouge Installed"
