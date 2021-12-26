@@ -39,7 +39,7 @@ fi
 
 DOWNLOAD catalouge
 
-rm -rf /home/roboshop/catalouge && mkdir /home/roboshop/catalogue && cp -r /tmp/catalouge-main/* /home/roboshop/catalogue
+rm -rf /home/roboshop/catalouge && mkdir /home/roboshop/catalouge && cp -r /tmp/catalouge-main/* /home/roboshop/catalouge
 &>>{LOG_FILE}
 STAT_CHECK $? "Copy catalouge content"
 
