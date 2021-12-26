@@ -57,7 +57,7 @@ NODEJS() {
   STAT_CHECK $? "Copy catalogue content"
 
   cd /home/roboshop && npm install --unsafe-perm &>>{LOG_FILE}
-  STAT_CHECK $? " Install ${component} dependencies"
+  STAT_CHECK $? "Install ${component} dependencies"
 
   chown roboshop:roboshop -R /home/roboshop
 
