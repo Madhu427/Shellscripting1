@@ -46,6 +46,11 @@ STAT_CHECK $? "Copy catalogue content"
 cd /home/roboshop && npm install --unsafe-perm &>>{LOG_FILE}
 STAT_CHECK $? " Install node js dependencies"
 
+chown roboshop:roboshop -R /home/roboshop
+
+sed -i "s/MONGO_DNSNAME/mongo.devopsrobshop.com/" /home/roboshop/catalogue/systemd.service &>>${LOG_FILE}
+STAT_CHECK $? "update entries in systemd file"
+
 
 #curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>${LOG_FILE}
 #STAT_CHECK $? "Download catalouge"
