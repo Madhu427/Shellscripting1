@@ -43,7 +43,8 @@ rm -rf /home/roboshop/catalogue && mkdir -p /home/roboshop/catalogue && cp -r /t
 &>>{LOG_FILE}
 STAT_CHECK $? "Copy catalogue content"
 
-cd /home/roboshop && npm install
+cd /home/roboshop && npm install --unsafe-perm &>>{LOG_FILE}
+STAT_CHECK $? " Install node js dependencies"
 
 
 #curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>${LOG_FILE}
