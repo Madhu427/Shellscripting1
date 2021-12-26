@@ -51,7 +51,8 @@ chown roboshop:roboshop -R /home/roboshop
 sed -i "s/MONGO_DNSNAME/mongo.devopsrobshop.com/" /home/roboshop/catalogue/systemd.service &>>${LOG_FILE} &&  mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 STAT_CHECK $? "update entries in systemd file"
 
-
+systemctl daemon-reload &>>{LOG_FILE} && systemctl start catalogue &>>{LOG_FILE} && systemctl enable catalogue &>>{LOG_FILE}
+STAT_CHECK $? "Start Catalogue Service"
 #curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>${LOG_FILE}
 #STAT_CHECK $? "Download catalouge"
 #
