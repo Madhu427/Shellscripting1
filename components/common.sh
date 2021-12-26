@@ -37,3 +37,34 @@ DOWNLOAD() {
   STAT_CHECK $? "extract ${1} code"
 
 }
+
+NODEJS() {
+  component=${1}
+  yum install nodejs make gcc-c++ -y &>>${LOG_FILE}
+  STAT_CHECK $? "INSTALL Node JS"
+
+  id roboshop &>>${LOG_FILE}
+  if [ $? -ne 0 ]; then
+  useradd roboshop &>>${LOG_FILE}
+  STAT_CHECK $? "User added"
+  fi
+
+
+  DOWNLOAD ${component}
+
+  rm -rf /home/roboshop/${component} && mkdir -p /home/roboshop/${component} && cp -r /tmp/${component}-main/* /home/roboshop/${component}
+  &>>{LOG_FILE}
+  STAT_CHECK $? "Copy catalogue content"
+
+  cd /home/roboshop && npm install --unsafe-perm &>>{LOG_FILE}
+  STAT_CHECK $? " Install ${component} dependencies"
+
+  chown roboshop:roboshop -R /home/roboshop
+
+  sed -i -e "s/MONGO_DNSNAME/mongo.devopsrobshop.com/" /home/roboshop/catalogue/systemd.service &>>${LOG_FILE} &&  mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+  STAT_CHECK $? "update entries in systemd file"
+
+  systemctl daemon-reload &>>{LOG_FILE} && systemctl start catalogue &>>{LOG_FILE} && systemctl enable catalogue &>>{LOG_FILE}
+  STAT_CHECK $? "Start ${component} Service"
+
+}
