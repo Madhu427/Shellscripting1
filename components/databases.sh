@@ -153,7 +153,7 @@ STAT_CHECK $? "Configure APP RabbitMQ User"
 ## mysql -u root -pRoboShop@1 <shipping.sql
 
 
-echo -e "\e[1;33m-----------------RABBITMQ SETUP-----------------\e[0m"
+echo -e "\e[1;33m-----------------MYSQL SETUP-----------------\e[0m"
 
 curl -s -L -o /etc/yum.repos.d/mysql.repo https://raw.githubusercontent.com/roboshop-devops-project/mysql/main/mysql.repo &>>${LOG_FILE}
 STAT_CHECK $? "configure yum repos"

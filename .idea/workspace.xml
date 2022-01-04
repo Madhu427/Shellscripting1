@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="cart update -- source missing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="mysql -service">
       <change beforePath="$PROJECT_DIR$/components/databases.sh" beforeDir="false" afterPath="$PROJECT_DIR$/components/databases.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,13 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640152776412</updated>
-    </task>
-    <task id="LOCAL-00074" summary="O/P alligning in proper order">
-      <created>1640401764671</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1640401764671</updated>
     </task>
     <task id="LOCAL-00075" summary="O/P alligning in proper order">
       <created>1640401902811</created>
@@ -411,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641286672035</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="mysql -service">
+      <created>1641288006489</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1641288006489</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,7 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REDIS SETUP -- conf file" />
     <MESSAGE value="updated mongodb.conf" />
     <MESSAGE value="Redis final" />
     <MESSAGE value="Rabbit MQ conf" />
@@ -451,6 +449,7 @@
     <MESSAGE value="update endpoints" />
     <MESSAGE value="cart update" />
     <MESSAGE value="cart update -- source missing" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart update -- source missing" />
+    <MESSAGE value="mysql -service" />
+    <option name="LAST_COMMIT_MESSAGE" value="mysql -service" />
   </component>
 </project>
