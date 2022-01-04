@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="update endpoints">
-      <change afterPath="$PROJECT_DIR$/components/cart.sh" afterDir="false" />
+    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="cart update">
+      <change beforePath="$PROJECT_DIR$/components/cart.sh" beforeDir="false" afterPath="$PROJECT_DIR$/components/cart.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,20 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640152776412</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Rabbit MQ -- Set user tags added">
-      <created>1640358666503</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1640358666503</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Rabbit MQ -- Set user tags added">
-      <created>1640358857631</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1640358857631</updated>
     </task>
     <task id="LOCAL-00073" summary="O/P alligning in proper order">
       <created>1640401391726</created>
@@ -410,7 +396,21 @@
       <option name="project" value="LOCAL" />
       <updated>1641285534317</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="cart update">
+      <created>1641286409885</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1641286409885</updated>
+    </task>
+    <task id="LOCAL-00121" summary="cart update">
+      <created>1641286436852</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1641286436852</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -425,7 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="code DRY -- frontend.sh" />
     <MESSAGE value="colour setup main heading 4 mongodb setup" />
     <MESSAGE value="REDIS SETUP -- conf file" />
     <MESSAGE value="updated mongodb.conf" />
@@ -450,6 +449,7 @@
     <MESSAGE value="user config --code dry --common.sh" />
     <MESSAGE value="update entries --code dry --common.sh" />
     <MESSAGE value="update endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="update endpoints" />
+    <MESSAGE value="cart update" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart update" />
   </component>
 </project>

@@ -22,5 +22,5 @@
 ## systemctl start cart
 ## systemctl enable cart
 
-
+source components/common.sh
 NODEJS cart
