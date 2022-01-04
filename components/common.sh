@@ -27,6 +27,15 @@ else
 fi
 }
 
+ APP_USER_SETUP() {
+    id roboshop &>>${LOG_FILE}
+    if [ $? -ne 0 ]; then
+      useradd roboshop &>>${LOG_FILE}
+      STAT_CHECK $? "Add Application user"
+
+    DOWNLOAD ${COMPONENT}
+  }
+
 DOWNLOAD() {
   curl -s -L -o /tmp/${1}.zip "https://github.com/roboshop-devops-project/${1}/archive/main.zip" &>>${LOG_FILE}
   STAT_CHECK $? "download ${1} code"
@@ -54,7 +63,7 @@ NODEJS() {
 
   rm -rf /home/roboshop/${component} && mkdir -p /home/roboshop/${component} && cp -r /tmp/${component}-main/* /home/roboshop/${component}
   &>>{LOG_FILE}
-  STAT_CHECK $? "Copy catalogue content"
+  STAT_CHECK $? "Copy ${component} content"
 
   cd /home/roboshop && npm install --unsafe-perm &>>{LOG_FILE}
   STAT_CHECK $? "Install ${component} dependencies"
@@ -67,4 +76,15 @@ NODEJS() {
   systemctl daemon-reload &>>{LOG_FILE} && systemctl start ${component} &>>{LOG_FILE} && systemctl enable ${component} &>>{LOG_FILE}
   STAT_CHECK $? "Start ${component} Service"
 
+}
+
+ JAVA() {
+
+  yum install maven -y &>>${LOG_FILE}
+  STAT_CHECK $? "Installing Maven"
+
+  APP_USER_SETUP
+
+  cd /home/roboshop/${COMPONENT} && mvn clean package &>>${LOG_FILE} && mv target/${component}-1.0.jar ${COMPONENT}.jar &>>{LOG_FILE}
+  STAT_CHECK "compile java code"
 }
