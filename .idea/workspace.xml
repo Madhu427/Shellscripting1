@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="mysql service final">
-      <change afterPath="$PROJECT_DIR$/components/shipping.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common.sh" beforeDir="false" afterPath="$PROJECT_DIR$/components/common.sh" afterDir="false" />
-    </list>
+    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="shipping code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,13 +64,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640152776412</updated>
-    </task>
-    <task id="LOCAL-00083" summary="catalouge -- changes on existing user">
-      <created>1640406019838</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1640406019839</updated>
     </task>
     <task id="LOCAL-00084" summary="catalouge -- changes on existing user">
       <created>1640406915966</created>
@@ -412,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641300923617</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="shipping code">
+      <created>1641303377024</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1641303377025</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -427,7 +423,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rabbit MQ to check user exists" />
     <MESSAGE value="Rabbit MQ -- Set user tags added" />
     <MESSAGE value="O/P alligning in proper order" />
     <MESSAGE value="O/P alligning in proper order -- MAX_LENGTH" />
@@ -452,6 +447,7 @@
     <MESSAGE value="mysql -service 1" />
     <MESSAGE value="mysql -service..." />
     <MESSAGE value="mysql service final" />
-    <option name="LAST_COMMIT_MESSAGE" value="mysql service final" />
+    <MESSAGE value="shipping code" />
+    <option name="LAST_COMMIT_MESSAGE" value="shipping code" />
   </component>
 </project>

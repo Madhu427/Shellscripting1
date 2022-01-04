@@ -33,7 +33,7 @@ fi
       useradd roboshop &>>${LOG_FILE}
       STAT_CHECK $? "Add Application user"
 
-    DOWNLOAD ${COMPONENT}
+    DOWNLOAD${COMPONENT}
   }
 
 DOWNLOAD() {
