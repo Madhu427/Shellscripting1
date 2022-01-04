@@ -164,10 +164,25 @@ STAT_CHECK $? "Install my sql"
 systemctl enable mysqld &>>{LOG_FILE} && systemctl start mysqld &>>${LOG_FILE}
 STAT_CHECK $? "Start my-sql service"
 
-grep temp /var/log/mysqld.log &>>${LOG_FILE}
-STAT_CHECK $? "Default password generated"
+DEFAULT_PASSWORD =$(grep 'temporary password' /var/log/mysqld.log | awk '{print NF}')
 
-mysql_secure_installation &>>${LOG_FILE}
-STAT_CHECK $? "default password changed"
+echo 'show databases;' | mysql -uroot -pRoboShop@1 &>>${LOG_FILE}
 
+if [ $? -ne 0 ]; then
 
+  echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';" >/tmp/pass.sql
+  mysql --connect-expired-password -uroot -p"${DEFAULT_PASSWORD}" </tmp/pass.sql &>>${LOG_FILE}
+  STAT_CHECK $? "Setup new root password"
+fi
+
+echo 'show plugins; | mysql -u root -p RoboShop@1 2>>${LOG_FILE} | grep validate_password &>>${LOG_FILE}'
+if [ $? -eq 0 ]; then
+  echo "uninstall plugin validate_password" | mysql -u root -p RoboShop@1 &>>${LOG_FILE}
+  STAT_CHECK $? "uninstall password plugin"
+fi
+
+DOWNLOAD mysql
+
+cd /tmp/mysql-main
+mysql -u root -pRoboShop@1 <shipping.sql &>>${LOG_FILE}
+STAT_CHECK $? "Schema Installed"
