@@ -164,7 +164,7 @@ STAT_CHECK $? "Install my sql"
 systemctl enable mysqld &>>{LOG_FILE} && systemctl start mysqld &>>${LOG_FILE}
 STAT_CHECK $? "Start my-sql service"
 
-DEFAULT_PASSWORD =$(grep 'temporary password' /var/log/mysqld.log | awk '{print NF}')
+DEFAULT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print NF}')
 
 echo 'show databases;' | mysql -uroot -pRoboShop@1 &>>${LOG_FILE}
 

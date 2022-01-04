@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="mysql -service 1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/databases.sh" beforeDir="false" afterPath="$PROJECT_DIR$/components/databases.sh" afterDir="false" />
-    </list>
+    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="mysql -service..." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,13 +64,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640152776412</updated>
-    </task>
-    <task id="LOCAL-00077" summary="O/P alligning in proper order -- MAX_LENGTH">
-      <created>1640402739162</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1640402739163</updated>
     </task>
     <task id="LOCAL-00078" summary="O/P alligning in proper order -- MAX_LENGTH">
       <created>1640402802742</created>
@@ -411,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641288882155</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="mysql -service...">
+      <created>1641300093562</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1641300093562</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,7 +423,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Redis final" />
     <MESSAGE value="Rabbit MQ conf" />
     <MESSAGE value="Rabbit MQ to check user exists" />
     <MESSAGE value="Rabbit MQ -- Set user tags added" />
@@ -451,6 +447,7 @@
     <MESSAGE value="cart update -- source missing" />
     <MESSAGE value="mysql -service" />
     <MESSAGE value="mysql -service 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="mysql -service 1" />
+    <MESSAGE value="mysql -service..." />
+    <option name="LAST_COMMIT_MESSAGE" value="mysql -service..." />
   </component>
 </project>
