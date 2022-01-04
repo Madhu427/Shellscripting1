@@ -61,7 +61,7 @@ NODEJS() {
 
   chown roboshop:roboshop -R /home/roboshop
 
-  sed -i -e 's/MONGO_DNSNAME/mongo.devopsrobshop.com/' \ -e 's/REDIS_ENDPOINT/redis.devopsrobshop.com/' \ -e 's/MONGO_ENDPOINT/mongo.devopsrobshop.com/' /home/roboshop/${component}/systemd.service &>>${LOG_FILE} &&  mv /home/roboshop/${component}/systemd.service /etc/systemd/system/${component}.service
+  sed -i -e 's/MONGO_DNSNAME/mongodb1.roboshop.internal/' \ -e 's/REDIS_ENDPOINT/redis1.roboshop.internal/' \ -e 's/MONGO_ENDPOINT/mongodb1.roboshop.internal/' /home/roboshop/${component}/systemd.service &>>${LOG_FILE} &&  mv /home/roboshop/${component}/systemd.service /etc/systemd/system/${component}.service
   STAT_CHECK $? "update entries in systemd file"
 
   systemctl daemon-reload &>>{LOG_FILE} && systemctl start ${component} &>>{LOG_FILE} && systemctl enable ${component} &>>{LOG_FILE}
