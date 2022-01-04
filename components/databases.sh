@@ -163,3 +163,11 @@ STAT_CHECK $? "Install my sql"
 
 systemctl enable mysqld &>>{LOG_FILE} && systemctl start mysqld &>>${LOG_FILE}
 STAT_CHECK $? "Start my-sql service"
+
+grep temp /var/log/mysqld.log &>>${LOG_FILE}
+STAT_CHECK $? "Default password generated"
+
+mysql_secure_installation &>>${LOG_FILE}
+STAT_CHECK $? "default password changed"
+
+
