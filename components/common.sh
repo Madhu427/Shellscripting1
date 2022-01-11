@@ -82,6 +82,6 @@ NODEJS() {
         STAT_CHECK $? "Add Application user"
   }
 
-  cd /home/roboshop/${COMPONENT} && mvn clean package &>>${LOG_FILE} && mv target/${component}-1.0.jar ${COMPONENT}.jar &>>{LOG_FILE}
+  cd /home/roboshop/${component} && mvn clean package &>>${LOG_FILE} && mv target/${component}-1.0.jar ${component}.jar &>>{LOG_FILE}
   STAT_CHECK "compile java code"
 }
