@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="dry code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="dry code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,13 +64,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640152776412</updated>
-    </task>
-    <task id="LOCAL-00086" summary="catalouge -- changes on existing user">
-      <created>1640407161740</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1640407161740</updated>
     </task>
     <task id="LOCAL-00087" summary="catalouge -- changes on existing user">
       <created>1640409532921</created>
@@ -410,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641881577219</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="dry code">
+      <created>1641882213814</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1641882213815</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
