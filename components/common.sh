@@ -27,14 +27,6 @@ else
 fi
 }
 
- APP_USER_SETUP() {
-    id roboshop &>>${LOG_FILE}
-    if [ $? -ne 0 ]; then
-      useradd roboshop &>>${LOG_FILE}
-      STAT_CHECK $? "Add Application user"
-
-    DOWNLOAD${COMPONENT}
-  }
 
 DOWNLOAD() {
   curl -s -L -o /tmp/${1}.zip "https://github.com/roboshop-devops-project/${1}/archive/main.zip" &>>${LOG_FILE}
@@ -83,7 +75,14 @@ NODEJS() {
   yum install maven -y &>>${LOG_FILE}
   STAT_CHECK $? "Installing Maven"
 
-  APP_USER_SETUP
+  APP_USER_SETUP() {
+      id roboshop &>>${LOG_FILE}
+      if [ $? -ne 0 ]; then
+        useradd roboshop &>>${LOG_FILE}
+        STAT_CHECK $? "Add Application user"
+
+    }
+
 
   cd /home/roboshop/${COMPONENT} && mvn clean package &>>${LOG_FILE} && mv target/${component}-1.0.jar ${COMPONENT}.jar &>>{LOG_FILE}
   STAT_CHECK "compile java code"
