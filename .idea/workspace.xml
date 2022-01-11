@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="shipping code">
+    <list default="true" id="8c625cd1-be19-4aac-aa2d-5e78b780c51c" name="Changes" comment="dry code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common.sh" beforeDir="false" afterPath="$PROJECT_DIR$/components/common.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640152776412</updated>
-    </task>
-    <task id="LOCAL-00085" summary="catalouge -- changes on existing user">
-      <created>1640407076097</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1640407076098</updated>
     </task>
     <task id="LOCAL-00086" summary="catalouge -- changes on existing user">
       <created>1640407161740</created>
@@ -411,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641303653992</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="dry code">
+      <created>1641881577218</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1641881577219</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,7 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rabbit MQ -- Set user tags added" />
     <MESSAGE value="O/P alligning in proper order" />
     <MESSAGE value="O/P alligning in proper order -- MAX_LENGTH" />
     <MESSAGE value="O/P alligning in proper order -- MAX_LENGTH adding Space" />
@@ -451,6 +449,7 @@
     <MESSAGE value="mysql -service..." />
     <MESSAGE value="mysql service final" />
     <MESSAGE value="shipping code" />
-    <option name="LAST_COMMIT_MESSAGE" value="shipping code" />
+    <MESSAGE value="dry code" />
+    <option name="LAST_COMMIT_MESSAGE" value="dry code" />
   </component>
 </project>
