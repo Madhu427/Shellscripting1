@@ -54,6 +54,8 @@ NODEJS() {
   DOWNLOAD ${component}
 
   rm -rf /home/roboshop/${component} && mkdir -p /home/roboshop/${component} && cp -r /tmp/${component}-main/* /home/roboshop/${component}
+
+
   &>>{LOG_FILE}
   STAT_CHECK $? "Copy ${component} content"
 
